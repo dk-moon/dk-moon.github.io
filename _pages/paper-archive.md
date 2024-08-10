@@ -1,6 +1,6 @@
 ---
 title: "Paper"
-layout: paper-archive
+layout: archive
 permalink: /paper-archive/
 author_profile: true
 ---
