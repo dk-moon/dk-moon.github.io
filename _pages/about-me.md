@@ -1,6 +1,6 @@
 ---
-title: "Introduce"
-layout: default
+title: "Moon Dongkyu"
+layout: posts
 permalink: /about-me/
 author_profile: true
 ---
