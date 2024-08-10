@@ -1,5 +1,5 @@
 ---
-title: "문듕규"
+title: "문동규"
 layout: archive
 permalink: /about-me/
 author_profile: true
@@ -16,7 +16,5 @@ AI 연구원 및 기술자 문동규 입니다.
 저는 AI 기술이 사람들의 일상에 편리함을 더하고, 실질적인 변화를 일으켜 사회에 긍정적인 영향을 미칠 수 있다고 믿습니다. 이러한 믿음을 바탕으로 새로운 기술을 배우고, 사람들에게 도움이 되는 솔루션을 제공하며, 사회 발전에 기여할 수 있는 인재가 되고자 합니다.
 
 # My Journey
-</br>
 
 ![loadmap](../assets/images/loadmap.png)
-</br>
