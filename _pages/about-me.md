@@ -1,14 +1,11 @@
 ---
-title: "문동규"
+title: "AI Researcher 문동규"
 layout: archive
 permalink: /about-me/
 author_profile: true
 ---
 
 # About Me
-
-AI 연구원 문동규 입니다.
-
 
 데이터 분석 연구원으로서의 경험, 인공지능 석사 과정, 그리고 KT AIVLE School에서의 여정을 통해 다양한 데이터 분석 기술과 인공지능 모델 연구 역량을 키워왔습니다. 이를 바탕으로 끊임없이 도전하며 성장해 나가고 있습니다.
 
