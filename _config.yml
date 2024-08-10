@@ -10,7 +10,7 @@ subtitle                 : # site tagline that appears below site title in masth
 name                     : "Moon Dongkyu"
 description              : "AI Researcher & Engineer"
 url                      : "https://dk-moon.github.io"
-baseurl                  : "/blog"
+baseurl                  : # "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : "/assets/images/teaser.png" # 500x300
 logo                     : "/assets/images/logo.png" # 88x88
