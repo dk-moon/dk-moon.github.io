@@ -18,3 +18,41 @@ AI 연구원 및 기술자 문동규 입니다.
 # My Journey
 
 ![loadmap](../assets/images/loadmap.png)
+
+- **KT AIVLE School 5기 AI 개발자 과정 수료**
+
+    <div style="display: flex; justify-content: flex-start;">
+        <img src="../assets/images/aivle.png" alt="aivle" width="75"/>
+        <img src="../assets/images/coma_1.png" alt="aivle" width="75"/>
+        <img src="../assets/images/coma_2.png" alt="aivle" width="75"/>
+    </div>
+
+    > - 2024.02 - 2024.08
+    > - **성적 우수상 수상 (1st)**, **프로젝트 우수상 수상 (3rd)**
+
+</br>
+
+- **단국대학교 인공지능융학학 석사과정 졸업**
+
+    > - 2022.03 - 2024.08
+    > - 학위논문: 강건한 혼합 효과 신경망을 이용한 시선 추정
+    </br>(Gaze Estimation with Robust Mixed Effect Neural Network)
+
+</br>
+
+- **BRFrame 데이터 분석 연구원**
+
+    > - 2020.06 - 2023.02 (2년 8개월)
+    > - 데이터 처리 및 분석, 인공지능 모델 개발 및 배포, Azure Cloud Service
+
+</br>
+
+- **한양대학교 산학협력단 머신러닝을 이용한 빅데이터 전문가 양성과정 수료**
+
+    > - 2019.12 - 2020.06
+
+</br>
+
+- **대진대학교 전자공학과 공학사 졸업**
+
+    > - 2014.03 - 2020.02
