@@ -48,3 +48,18 @@ AI 연구원 및 기술자 문동규 입니다.
 - **대진대학교 전자공학과 공학사 졸업**
 
     > - 2014.03 - 2020.02
+
+# Certification
+
+<div style="display: flex; justify-content: flex-start;">
+    <img src="../assets/images/asso.png" alt="aivle" width="75"/>
+    <img src="../assets/images/az104_bedge.png" alt="aivle" width="75"/>
+</div>
+
+- **AICE ASSOCIATE**
+
+    > - 2024.07.12 - 2027.07.11
+
+- **Microsoft Certified: Azure Administrator Associate (AZ-104)**
+
+    > - 2020.11.29 - 2025.11.28
