@@ -1,6 +1,6 @@
 ---
 title: "Moon Dongkyu"
-layout: posts
+layout: default
 permalink: /about-me/
 author_profile: true
 ---
