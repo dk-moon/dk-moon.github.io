@@ -1,6 +1,6 @@
 ---
 title: "Introduce"
-layout: posts
+layout: default
 permalink: /about-me/
 author_profile: true
 ---
