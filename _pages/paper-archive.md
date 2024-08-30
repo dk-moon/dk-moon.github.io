@@ -10,10 +10,7 @@ author_profile: true
 <details>
   <summary>Master's Thesis</summary>
   <div markdown="1">
-    <ul>
-      <li>1</li>
-      <li>2</li>
-    </ul>
+    학위논문
   </div>
 </details>
 
@@ -24,9 +21,6 @@ author_profile: true
 <details>
   <summary>Thesis</summary>
   <div markdown="1">
-    <ul>
-      <li>1</li>
-      <li>2</li>
-    </ul>
+    한국데이터정보과학회
   </div>
 </details>
