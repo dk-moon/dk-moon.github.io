@@ -17,6 +17,8 @@ author_profile: true
   </div>
 </details>
 
+--------
+
 # 한국데이터정보과학회
 
 <details>
