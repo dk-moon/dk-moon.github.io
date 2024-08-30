@@ -9,9 +9,8 @@ author_profile: true
 
 <details>
   <summary>Master's Thesis</summary>
-  <div markdown="1">
-    학위논문
-  </div>
+  
+  학위논문
 </details>
 
 --------
