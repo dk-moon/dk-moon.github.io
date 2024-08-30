@@ -10,7 +10,10 @@ author_profile: true
 <details>
   <summary>Master's Thesis</summary>
   
-  학위논문
+  ## 학위논문
+
+  test
+  
 </details>
 
 --------
