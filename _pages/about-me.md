@@ -60,3 +60,7 @@ author_profile: true
 - **Microsoft Certified: Azure Administrator Associate (AZ-104)**
 
     > - 2020.11.29 - 2025.11.28
+
+- **PCCE(Programmers Certified Coding Essential) Master(Lv4, Python)**
+
+    > - 2024.08.18 ~ 2031.08.17
