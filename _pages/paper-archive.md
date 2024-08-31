@@ -10,8 +10,8 @@ author_profile: true
 <details>
   <summary>Master's Thesis</summary>
   <div markdown="1">
-    ## 강간한 혼합 효과 신경망을 이용한 시선 추정
-    ### Gaze Estimation with Robust Mixed Effect Neural Network
+  ## 강간한 혼합 효과 신경망을 이용한 시선 추정
+  ### Gaze Estimation with Robust Mixed Effect Neural Network
     
     #### Abstract
     -----
