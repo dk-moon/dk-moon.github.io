@@ -500,6 +500,8 @@
 								<p>
 									시선 추정 모델은 사용자별 생리적 차이와 환경 변화(조명, 머리 자세)로 인해 정확도가 저하되는 문제가 있습니다. 이를 해결하기 위해 
 									<strong>강건한 혼합 효과 신경망(Robust Mixed-Effects Neural Network, RMEN)</strong>을 도입하였습니다.
+									<br>
+									<br>
 									이 모델은 고정 효과(Fixed Effects)와 랜덤 효과(Random Effects)를 함께 학습하여 개인별 특성을 반영합니다. 기존 모델이 모든 사용자에게 동일한 가중치를 적용하는 반면, 
 									RMEN은 사용자별 임베딩을 학습하여 맞춤형 시선 추정을 수행합니다.
 									<br>
@@ -513,28 +515,36 @@
 
 						<!-- 두 번째 프로젝트 -->
 						<div class="resume-wrap d-flex ftco-animate">
+							<!-- 원형 아이콘 컨테이너 -->
 							<div class="icon-container d-flex align-items-center justify-content-center">
 								<span class="flaticon-ideas"></span>
 							</div>
+							
 							<div class="text pl-3">
-								<span class="date">2023.09-2024.01</span>
+								<!-- 날짜 + 아이콘 정렬 -->
+								<div class="d-flex align-items-center">
+									<span class="date">2023.09-2024.01</span>
+									<span class="ml-2 text-primary"><i class="fas fa-calendar-alt"></i></span>
+								</div>
+								
 								<div class="d-flex justify-content-between align-items-center flex-wrap">
 									<h2 class="mb-0 flex-grow-1">선형 회귀 및 객체 검출을 이용한 열처리 공정에서의 내부 제품 배치 연구</h2>
-									<div>&nbsp;<a class="btn btn-outline-secondary" target="_blank"
-										class="btn btn-outline-secondary"
-										href="https://github.com/dk-moon/Furnace_Simulator">Github</a>&nbsp;<a
-										class="btn btn-outline-secondary" target="_blank"
-										href="https://drive.google.com/file/d/1CH-eENa0-3qsy_Tq-cfH9xSxor6sq20-/view?usp=sharing">Paper</a>
+									<div class="btn-group">
+										<a class="btn btn-outline-secondary" target="_blank"
+											href="https://github.com/dk-moon/Furnace_Simulator">Github</a>
+										<a class="btn btn-outline-secondary" target="_blank"
+											href="https://drive.google.com/file/d/1CH-eENa0-3qsy_Tq-cfH9xSxor6sq20-/view?usp=sharing">Paper</a>
+									</div>
 								</div>
-								</div>
+
 								<span class="position">단국대학교, 한국생산기술연구원, PNS빅데이터과학연구소</span>
 								<p>
 									열처리 공정에서는 제품 배치에 따라 온도 분포가 달라져 품질에 큰 영향을 미칩니다. 이를 해결하기 위해 선형 회귀 및 객체 검출 기반 제품 배치 최적화 모델을 연구하였습니다.
-									<br>
+									<br><br>
 									먼저, 열처리로 내부의 온도 변화를 예측하기 위해 선형 회귀 모델을 적용하여, 제품의 위치와 온도 분포 간의 상관관계를 분석하였습니다. 이후, 객체 검출 모델을 활용하여 공정 내 제품 배치를 자동 인식하고 최적화된 배치 패턴을 도출하였습니다.
-									<br>
+									<br><br>
 									또한, 실제 공정 데이터를 기반으로 모델을 학습하고, 온도 편차를 줄이는 최적 배치를 도출하였습니다. 실험 결과, 기존 배치 방식 대비 제품 간 온도 편차가 10% 이상 감소하며, 품질 향상과 공정 효율 개선 효과를 확인할 수 있었습니다.
-									<br>
+									<br><br>
 									향후 연구로는 강화학습을 적용하여 최적 배치를 실시간으로 추천하는 AI 시스템 개발을 목표로 하고 있습니다. 🚀
 								</p>
 							</div>
