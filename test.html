@@ -1,0 +1,696 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>메모</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.highlight-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.block-color-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: undefined; }
+.select-value-color-pink { background-color: rgba(225, 136, 179, 0.27); }
+.select-value-color-purple { background-color: rgba(168, 129, 197, 0.27); }
+.select-value-color-green { background-color: rgba(123, 183, 129, 0.27); }
+.select-value-color-gray { background-color: rgba(84, 72, 49, 0.15); }
+.select-value-color-transparentGray { background-color: undefined; }
+.select-value-color-translucentGray { background-color: undefined; }
+.select-value-color-orange { background-color: rgba(224, 124, 57, 0.27); }
+.select-value-color-brown { background-color: rgba(210, 162, 141, 0.35); }
+.select-value-color-red { background-color: rgba(244, 171, 159, 0.4); }
+.select-value-color-yellow { background-color: rgba(236, 191, 66, 0.39); }
+.select-value-color-blue { background-color: rgba(93, 165, 206, 0.27); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="dc8355ab-bd04-4664-90d5-a9ef65979abb" class="page sans"><header><h1 class="page-title">메모</h1><p class="page-description"></p></header><div class="page-body"><p id="1058e69f-2941-8010-8206-f146d5b6ef95" class="">
+</p><ul id="9ff70374-e17e-4cf3-b740-27ff392d13b5" class="toggle"><li><details open=""><summary>경력기술_요약본</summary><p id="d4ec51bb-c2ab-4e04-b830-993612ed7819" class="">고객사 데이터 분석</p><ol type="1" id="528072d6-64e3-4e33-b577-4d069dfd27e6" class="numbered-list" start="1"><li>산업 장비 교체 관련 전력 효율성 향상성 검증</li></ol><ol type="1" id="ceef14b7-b265-44d4-882e-1f4548ad14bd" class="numbered-list" start="2"><li>자사 Smart care 서비스 노년층 우울 개선 효과성 검증</li></ol><ol type="1" id="9fed3f7a-07d8-44ab-88e2-b142f71eab73" class="numbered-list" start="3"><li>AI Hub 인공지능 학습용 체부암, 유방암, 갑상선암 의료 이미지 데이터셋 구축</li></ol><ol type="1" id="19fe3d60-fdeb-48c3-9730-2d52b13026f4" class="numbered-list" start="4"><li>디지털 치료제 플랫폼 중 우울증 예측을 위한 3차원 행동 데이터 수집 도구 GUI 프로그램 개발</li></ol><p id="feae3be6-cc47-4120-b971-1d2b07311123" class="">
+</p><p id="1e0b74fe-dac0-4a0f-8f9c-c8427f7bed28" class="">Azure Cloud Service 컨설팅</p><ol type="1" id="0ec7f573-2265-489d-879e-c90d0b3d74fa" class="numbered-list" start="1"><li>Vision 기반 건설 현장 안전 검증 플랫폼 POC</li></ol><ol type="1" id="373b4174-b430-455b-9063-b19954c5a730" class="numbered-list" start="2"><li>Azure IoT B2B 교육</li></ol><p id="5ecf2e87-30ff-4e64-9e55-14e9d78d0db2" class="">
+</p><p id="9ddcbd63-4e6d-4718-9173-390d8d62ca3c" class="">자사 인공지능 모델 개발 및 배포</p><ol type="1" id="a3b4e52e-68b0-468f-9f8c-0381d6bdc9f0" class="numbered-list" start="1"><li>노년층 우울 단계 예측을 위한 발화 영상에서 텍스트 데이터 추출을 위한 Speech-to-Text 모델 파이프라인 구축</li></ol><ol type="1" id="6a92b12b-8454-4046-adb6-e9f6dceaa31a" class="numbered-list" start="2"><li>우울 단계 예측 ML 모델 개발 및 배포</li></ol></details></li></ul><ul id="1058e69f-2941-8002-9248-c924f4750882" class="toggle"><li><details open=""><summary>경력기술</summary><p id="1058e69f-2941-8073-ae27-c2c32602c755" class="">[고객사 데이터 분석]</p><ol type="1" id="1058e69f-2941-80f1-8ee4-e48e97602601" class="numbered-list" start="1"><li>산업 장비 교체 관련 전력 효율성 향상 검증</li></ol><ul id="1058e69f-2941-8043-92a8-f75d40485927" class="bulleted-list"><li style="list-style-type:disc">프로젝트 목표 : 공장 설비 교체 시 전력 효율성을 분석하여 장비 교체의 경제적 타당성을 검증</li></ul><ul id="1058e69f-2941-807a-a898-dc728340b416" class="bulleted-list"><li style="list-style-type:disc">주요 역할 : 공장 설비에 동일한 데이터 수집 센서를 설치하여 전력 사용량 및 시계열 데이터를 수집, 신규 설비와 기존 설비의 전력 효율성을 비교 분석</li></ul><ul id="ab9302cd-dd6c-4f8a-9e62-a769697063f4" class="bulleted-list"><li style="list-style-type:disc">성과 : 전력 사용량 15% 절감. 효율성 개선을 위한 설비 교체의 경제적 효과를 입증하여 고객사의 의사결정에 기여</li></ul><ol type="1" id="1058e69f-2941-808c-8706-fe1163f59d09" class="numbered-list" start="1"><li>Smart Care 자사 서비스 노년층 우울 개선 효과성 검증</li></ol><ul id="1058e69f-2941-804b-aadc-c297feb554d3" class="bulleted-list"><li style="list-style-type:disc">프로젝트 목표 : 노년층 우울증 개선을 위한 자사 Smart Care 서비스의 효용성을 2년간의 사용 데이터를 통해 검증</li></ul><ul id="1058e69f-2941-8074-8f63-ea1a2995cfb4" class="bulleted-list"><li style="list-style-type:disc">주요 역할 : 데이터 수집, 분석 및 우울 증상 개선 여부 평가, 데이터 기반 서비스 개선 방안 도출</li></ul><ul id="1058e69f-2941-8028-a87c-ee04ae217e9b" class="bulleted-list"><li style="list-style-type:disc">성과 : 서비스 사용자 중 70%의 우울증 개선 효과 확인, 서비스 개선을 위한 구체적 제안서를 제출하여 서비스 성능을 향상시킴</li></ul><ol type="1" id="1058e69f-2941-8098-8643-ce746809cb2f" class="numbered-list" start="1"><li>AI Hub 인공지능 학습용 의료 이미지 데이터셋 구축</li></ol><ul id="1058e69f-2941-80e9-a6e5-f9f1283afb83" class="bulleted-list"><li style="list-style-type:disc">프로젝트 목표 : 인공지능 학습을 위한 체부암, 유방암, 갑상선암 의료 이미지 데이터셋 구축 및 AI Hub에 등재</li></ul><ul id="85e6a7c3-35e0-45a9-904e-dd495e16e6d6" class="bulleted-list"><li style="list-style-type:disc">주요 역할 : 의료 이미지 데이터 수집 및 라벨링, 데이터셋 구축 및 검증 후 AI Hub에 등재</li></ul><ul id="1058e69f-2941-803d-9fb7-e7ed95fd8ad0" class="bulleted-list"><li style="list-style-type:disc">성과 : 인공지능 연구자들이 활용할 수 있는 고품질 의료 이미지 데이터셋을 성공적으로 구축 및 등재, 인공지능 의료 연구의 기반 제공</li></ul><ol type="1" id="1058e69f-2941-808e-8b9a-ec73c2d28b3e" class="numbered-list" start="1"><li>디지털 치료제 플랫폼 중 우울증 예측을 위한 행동 데이터 수집 도구 개발</li></ol><ul id="82531d7c-e232-42f5-bb17-3160b22e1ec5" class="bulleted-list"><li style="list-style-type:disc">프로젝트 목표 : 우울증 예측을 위한 3차원 행동 데이터를 수집하는 GUI 프로그램 개발</li></ul><ul id="1058e69f-2941-80d3-980b-d51e6acf6b1e" class="bulleted-list"><li style="list-style-type:disc">주요 역할 : 실시간 행동 데이터 수집 도구 설계 및 개발, 데이터 수집 정확도를 높이기 위한 프로세스 개선</li></ul><ul id="1058e69f-2941-80b2-b66b-ca7c23559049" class="bulleted-list"><li style="list-style-type:disc">성과 : 실시간 데이터 수집 도구 개발 및 배포, 우울증 진단 AI 모델의 학습에 필수적인 데이터를 확보하여 정확한 예측 가능</li></ul><p id="1058e69f-2941-805c-8455-d1c1f4ffe77a" class="">[Azure Cloud Service 컨설팅]</p><ol type="1" id="1058e69f-2941-805a-ae5c-c14bd13b850a" class="numbered-list" start="1"><li>Vision AI 기반 건설 현장 안전 검증 플랫폼 POC</li></ol><ul id="1058e69f-2941-8010-a22b-f28ffe9825b8" class="bulleted-list"><li style="list-style-type:disc">프로젝트 목표 : Azure Cognitive Service의 Vision AI를 사용해 건설 현장 안전 검증을 위한 POC 개발</li></ul><ul id="1058e69f-2941-8058-8143-c6d8afc12392" class="bulleted-list"><li style="list-style-type:disc">주요 역할 : 전이 학습을 통한 AI 모델 학습 및 API 배포</li></ul><ul id="1058e69f-2941-8069-9ca7-cc5ab5b6aa30" class="bulleted-list"><li style="list-style-type:disc">성과 : Vision AI 알고리즘을 적용해 건설 현장 안전 검증 시스템 성능을 15% 개선, 실시간 데이터 분석 가능성을 입증</li></ul><ol type="1" id="1058e69f-2941-806a-b2ed-db159f98c719" class="numbered-list" start="1"><li>Azure IoT B2B 교육</li></ol><ul id="1058e69f-2941-80b3-b375-c6414623f9e1" class="bulleted-list"><li style="list-style-type:disc">프로젝트 목표 : Azure IoT Hub 및 Central 서비스를 활용해 스타트업을 위한 IoT 서비스 개발 교육 제공</li></ul><ul id="1058e69f-2941-80c6-88dd-ffa1e70556fe" class="bulleted-list"><li style="list-style-type:disc">주요 역할 : 실습 환경 구축 및 IoT 서비스 개발 관련 이론 및 실습 강의 진행</li></ul><ul id="1058e69f-2941-808e-acfe-cabb148c2064" class="bulleted-list"><li style="list-style-type:disc">성과 : 스타트업 대상 교육을 통해 IoT 서비스 개발 인사이트 제공 및 실습을 통해 빠른 학습 환경 구축</li></ul><p id="1058e69f-2941-8060-aa51-e5f594b8658c" class="">[자사 인공지능 모델 개발 및 배포]</p><ol type="1" id="1058e69f-2941-808c-a8f4-dc7721286870" class="numbered-list" start="1"><li>노년층 우울 단계 예측을 위한 음성인식(Speech to Text) 모델 파이프라인 구축</li></ol><ul id="1058e69f-2941-80c2-b633-fa98175ff00f" class="bulleted-list"><li style="list-style-type:disc">프로젝트 목표 : 노년층 우울증 단계 예측을 위한 발화 데이터를 기반으로 음성인식 모델을 구축</li></ul><ul id="d5320b38-7159-45c3-a2c6-67e9d1f49e8a" class="bulleted-list"><li style="list-style-type:disc">주요 역할 : 음성인식 모델 설계 및 개발, 발화 텍스트 데이터 추출 파이프라인 구축</li></ul><ul id="1058e69f-2941-80fd-838d-f23bd5e3b69e" class="bulleted-list"><li style="list-style-type:disc">성과 : 텍스트 추출 정확도 92% 달성, 우울 단계 예측을 위한 발화 텍스트 데이터 확보</li></ul><ol type="1" id="1058e69f-2941-80c2-ab10-e2d58ae10d10" class="numbered-list" start="1"><li>우울 단계 예측 ML 모델 개발 및 배포</li></ol><ul id="1058e69f-2941-808f-8645-ce5399d0178f" class="bulleted-list"><li style="list-style-type:disc">프로젝트 목표 : 우울 단계 예측을 위한 기계학습 모델(CatBoost)을 사용해 텍스트 데이터를 분석</li></ul><ul id="1058e69f-2941-801a-9c23-c5410236dd91" class="bulleted-list"><li style="list-style-type:disc">주요 역할 : ML 모델 개발 및 평가, 서비스 배포를 위한 최적화</li></ul><ul id="1058e69f-2941-8072-835a-c7964b5d5899" class="bulleted-list"><li style="list-style-type:disc">성과 : 우울 단계 예측 정확도 85% 달성, 안정적인 모델 성능 유지 및 서비스 배포 완료</li></ul></details></li></ul><ul id="37f06c27-087f-4dee-9c43-8db570a0d7fe" class="toggle"><li><details open=""><summary>경력상세설명</summary><p id="4ef4a127-4a51-495d-bbd6-395a4ccdc296" class="">고객사 데이터 분석으로는 산업 장비 교체에 따른 전력 효율성을 분석하고, 자사의 Smart Care 서비스가 노년층 우울증 개선에 미치는 영향을 검증했습니다. AI Hub를 위해 체부암 등 의료 이미지 데이터셋을 구축했고, 디지털 치료제 플랫폼 개발을 위해 우울증 예측용 3차원 행동 데이터 수집 도구를 개발했습니다.</p><p id="c4c00597-1b37-4a0a-b52e-9807fad5bdbe" class="">Azure Cloud Service 컨설팅에서는 Vision 기반 건설 현장 안전 검증 플랫폼을 개발하고, Azure IoT B2B 교육을 통해 스타트업에 IoT 서비스 개발 관련 이론 및 실습을 제공했습니다.</p><p id="9f61e79b-8284-4597-8b17-6c942771d5f5" class="">자사 인공지능 모델 개발에서는 우울 단계 예측을 위한 Speech-to-Text 모델 파이프라인을 구축하고, 기계 학습 모델로 우울 단계를 분류했습니다. 이를 통해 데이터 분석, 인공지능 모델 개발, 클라우드 서비스 컨설팅 분야에서 역량을 강화했습니다.</p></details></li></ul><p id="4a8820ab-dd9b-4a66-8dc7-50e3e30d3b1e" class="">
+</p><ul id="9c255434-b5ac-434b-8280-b532bb3861e2" class="toggle"><li><details open=""><summary>상상유니브 설명</summary><figure id="cc2f8d17-32d0-4a37-8d4f-82b9adc6c971" class="image"><a href="%E1%84%86%E1%85%A6%E1%84%86%E1%85%A9%20dc8355abbd04466490d5a9ef65979abb/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-09-02_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_2.11.06.png"><img style="width:708px" src="%E1%84%86%E1%85%A6%E1%84%86%E1%85%A9%20dc8355abbd04466490d5a9ef65979abb/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-09-02_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_2.11.06.png"/></a></figure><p id="7a7d4e92-9c6e-4ac6-9dbb-8ed63fcf46c4" class="">봉사활동에 열정을 가진 청년 대학생들이 모여, 사회에 긍정적인 영향을 미치기 위해 직접 봉사활동을 기획하고 실행하는 대외활동을 수행했습니다. 주요 활동으로는 화재 예방 캠페인을 기획하여, 화재의 위험성과 대응 방법을 시민들에게 알리는 활동을 진행했습니다. 또한, 삼성복지원에서 개최된 장애우 체육대회에 진행 요원으로 참여하여, 다양한 종목에서 장애우들이 안전하고 즐겁게 체육활동에 참여할 수 있도록 지원했습니다. 마지막으로, 도시 미화를 위해 이태원에서 계단 벽화 그리기 봉사활동을 기획하고, 도안을 구상하여 아름다운 벽화를 완성했습니다. 이 활동을 통해 지역 사회에 아름다움을 더하고, 봉사정신을 실천하는 기회를 가졌습니다.</p><p id="11c8e69f-2941-8092-8bfb-f11792fd2a39" class="">
+</p><p id="11c8e69f-2941-8076-a207-f916fb9ee15e" class="">KT&amp;G 상상발룬티어는 KT&amp;G가 후원하는 대학생 봉사단으로, 청년들이 주도적으로 사회에 긍정적인 변화를 만들기 위해 다양한 봉사활동을 기획하고 실천하는 단체입니다. 이 활동을 통해 사회적 책임을 다하고 공동체에 기여하고자 하는 것이 목표입니다. 저 역시 이러한 취지에 공감하여 다양한 활동에 참여했습니다.</p><p id="11c8e69f-2941-8062-a7e0-e3e831ddc02a" class="">저는 화재 예방 캠페인을 통해 시민들에게 화재의 위험성과 대응 방법을 알리는 활동을 주도했고, 삼성복지원의 장애우 체육대회에서 진행 요원으로 봉사하며 장애우들이 체육 활동을 안전하게 즐길 수 있도록 지원했습니다. 또한, 도시 미화 프로젝트로 이태원에서 계단 벽화 그리기 활동을 기획하고 도안을 디자인하여 지역 사회에 시각적 아름다움을 더했습니다.</p><p id="11c8e69f-2941-805e-9821-f208e6f6a930" class="">이 모든 활동을 통해 사회적 가치를 실현하고 지역 사회에 긍정적인 변화를 주도한 경험이 소중했고, 나아가 봉사 정신과 기획력, 팀워크를 발전시키는 계기가 되었습니다.</p></details></li></ul><p id="1058e69f-2941-806d-a53b-f4d16bb32b2c" class="">
+</p><ul id="d8d615f8-2826-44da-83e4-188487c473c3" class="toggle"><li><details open=""><summary>논문 설명</summary><p id="e60298a8-8c99-4642-bfd3-bac4f02b2f12" class="">학위 논문<br/>제목 : 강건한 혼합 효과 신경망을 이용한 시선 추정<br/>개요<br/>기존의 정규분포를 따르는 혼합 효과 신경망(mixed effect neural network)뿐만 아니라, 현재의 기계 학습 및 심층 신경망 모델에서도 외부 환경 변화나 개인 간 차이로 인해 발생하는 이상치(e-outlier)와 학습되지 않은 군집이나 새로운 개인별 데이터에서 발생하는 이상치(b-outlier)로 인해 일관된 성능을 유지하지 못하는 한계점이 존재한다.<br/>혼합 효과 신경망은 이러한 개인 간 변이와 환경의 차이를 효과적으로 모델링할 수 있는 잠재력을 가지고 있지만, 기존의 방법들은 여전히 이상치에 민감하고 도메인 일반화에서 한계를 드러낸다.<br/>이를 극복하기 위해, 본 연구에서는 혼합 효과 심층 신경망의 변량효과(random effect)와 오차가 t-분포를 따르도록 하여 더 강건한 학습과 안정적인 추정을 가능하게 하는 방법을 시선 추정(gaze estimation) 분야에 적용하여 제안한다. 혼합 효과 모델을 선택한 이유는, 다양한 개인 간 차이와 복잡한 외부 환경 변화를 반영하면서도, 이러한 변동성 속에서 일관된 성능을 유지할 수 있는 능력을 극대화하기 위함이다.<br/>이전의 혼합 효과 신경망에서 학습하지 않은 군집 및 개인별 데이터에 대해 일관된 성능을 도출하기 위해 제안된 적대적으로 정규화된 혼합 효과 심층학습(Adversarially-regularized mixed effect deep learning, ARMED) 연구에 본 연구에서 제안하는 방법을 적용함으로써 외부 환경의 변화와 개인 간 신체 특성의 변화량에 대해 강건하게 학습할 수 있으며, 극단값에 민감하지 않은 안정적인 추정이 가능하다.<br/>실험 결과, 제안하는 방법을 적용한 신경망은 기존의 신경망 모델 대비 평균 24% 향상된 정확도를 보였으며, 다양한 환경과 개인별 데이터에 대한 강건성을 입증하였다. 이러한 결과는 실제 응용에서의 시선 추정 기술의 신뢰성과 유용성을 크게 향상시킬 것으로 기대된다.<br/>본 연구는 시선 추정 분야에서 수행되었지만, 주된 관점은 이상치 처리 방법과 도메인 일반화에 초점을 맞추고 있다. 이러한 연구 결과는 시선 추정뿐만 아니라, 다양한 분야에서 이상치와 도메인 불일치 문제를 다루는 데에도 중요한 기여를 할 것으로 기대된다.<br/></p><p id="6db52ec5-13df-45e5-b56c-25333892da32" class="">ver2</p><p id="6a76326d-b2be-43a7-be9b-47fed48138e6" class="">이 논문은 다양한 환경 변화나 데이터의 이상치에도 강건하게 작동할 수 있는 모델을 개발하는 것을 목표로 하고 있습니다. 연구의 핵심은, 기존의 기계학습 및 심층 신경망 모델이 이상치나 예기치 않은 데이터 패턴에 취약한 문제를 해결하는 데 있습니다. 이를 위해 기존 모델에서 사용되던 정규분포 대신, t-분포를 기반으로 한 접근법을 도입했습니다. 이 방법을 통해 모델이 이상치에 덜 민감하게 반응하도록 하고, 다양한 상황에서도 일관된 성능을 유지할 수 있도록 하였습니다. 제안한 모델은 고정효과와 변량효과를 별도로 학습시키고, t-분포를 활용한 손실 함수를 적용하여, 데이터의 중심부를 보다 정확하게 포착할 수 있습니다. 또한, 적대적 학습 기법을 통해 학습되지 않은 새로운 데이터에 대해서도 강한 일반화 성능을 보일 수 있도록 설계되었습니다. 실험 결과, 이 모델은 기존 방법에 비해 평균 24% 더 높은 정확도를 기록하였으며, 이는 모델이 이상치나 환경 변화에 강건하게 대응할 수 있음을 보여줍니다. 이 연구의 주된 목적은 시선 추정 기술의 단순한 개선을 넘어, 데이터의 이상치와 불규칙한 변동에도 흔들리지 않는 안정적인 기계 학습 모델을 제안하는 것입니다. 이를 통해 자율주행, 의료 진단, 가상/증강 현실 등 다양한 분야에서 신뢰성 높은 기술을 구현할 수 있는 기반을 마련하는 데 기여합니다.</p><p id="21934c38-cb2e-4f5f-b918-f9e3c969f9fd" class="">
+</p><p id="bd226a61-afcf-4bc2-8723-01ab63a4f835" class="">연구 논문<br/>제목 : 선형 회귀 및 객체 검출을 이용한 열처리 공정에서의 내부 제품 배치 연구<br/>개요<br/>열처리 공정에서 로 내부 온도 분포가 일정하지 않아 불량품이 발생하고, 이를 해결하기 위해 추가 생산이 필요해 비용이 증가합니다. 본 연구는 이 문제를 해결하기 위해 선형 회귀와 객체 검출 모델을 활용하여 로 내부 온도 분포를 예측하고, 3D 시뮬레이션을 통해 부품 배치의 적절성을 사전에 평가하는 방법을 제안합니다. 이를 통해 제품의 품질을 높이고 불량률을 줄이며, 공정의 효율성을 개선할 수 있습니다.<br/></p><p id="94b9a5b6-f0e9-40fa-b376-ba5213e39acf" class="">ver2</p><p id="81df1622-dc8e-4aab-ae46-f55bcf993d3c" class="">금속 열처리 공정에서 발생하는 불량률을 줄이고 공정 효율을 높이기 위해, 선형 회귀와 객체 검출을 활용하여 로(爐) 내부 온도 분포를 추정하고 제품의 배치를 최적화하는 방법을 연구하였습니다. 열처리 공정에서 로의 내부 온도는 제품의 품질에 중요한 영향을 미치며, 온도가 균일하지 않으면 제품의 불량률이 높아집니다. 기존의 방법들은 주로 경험에 의존하여 제품을 배치하기 때문에 불량이 발생할 가능성이 높으며, 이를 보완하기 위해 평균적으로 10% 이상의 추가 생산이 필요합니다. 논문에서 제안하는 방법은 선형 회귀 모델을 이용해 로 내부의 온도 분포를 예측하고, 객체 검출 기술을 통해 지그에 배치된 제품들의 위치를 정확하게 파악합니다. 이를 바탕으로 3차원 가상 시뮬레이션을 수행하여 로에 제품이 최적의 위치에 배치되었는지를 확인하고, 균일한 가열이 가능하도록 조정합니다. 이 과정을 통해 불량률을 줄이고 생산 공정의 효율성을 높이는 것이 연구의 주요 목표입니다. 결국, 이 논문을 통해 기존의 경험 기반 공정 관리를 대체할 수 있는 과학적이고 체계적인 방법을 제시하며, 금속 가공 기업들이 공정 최적화를 통해 경제적 이점을 얻을 수 있는 새로운 방향을 제시하고 있습니다.</p><p id="0b59a116-c1f0-4488-8f91-c725da7b4bbc" class="">
+</p><p id="843a0146-8576-46dd-8b09-c335120b5c4c" class="">첫 번째 프로젝트는 딥 보이스 탐지 API 서비스 개발로, 딥 페이크 음성을 감지하는 분류기를 개발했습니다. 이 과정에서 음성 데이터를 전처리하고, Vision Transformer 모델을 활용하여 멜-스펙트로그램 이미지를 기반으로 진짜 음성과 가짜 음성을 구별하는 AI 모델을 구축했습니다. 해당 모델은 높은 정확도로 딥 페이크 음성을 감지했으며, 이를 통해 보안 및 인증 분야에서 활용할 수 있는 솔루션을 제공했습니다.</p><p id="f61df30f-4024-4f81-8460-2700ba1dc147" class="">두 번째 프로젝트는 RAG 기반 FAQ Chatbot 개발로, Recurrent Attention Generative 모델을 사용하여 FAQ Chatbot을 개발하고 웹 서버에 배포했습니다. 데이터 수집과 전처리, 모델 훈련 및 최적화 과정을 통해 다양한 질문에 대해 실시간으로 정확한 답변을 제공하는 시스템을 구축했습니다. 이 Chatbot은 웹 인터페이스와 통합되어 기업의 고객 서비스 효율성을 높이는 데 기여했습니다.</p></details></li></ul><p id="34b22b60-d586-438b-a5f0-1dd7fc75c7ed" class="">
+</p><ul id="7ea06c2b-0a9f-4e51-b34a-560e2f6748eb" class="toggle"><li><details open=""><summary>데이콘 설명</summary><figure id="d674fd29-d1d8-4616-b685-8cfdf46e9bb8" class="image"><a href="%E1%84%86%E1%85%A6%E1%84%86%E1%85%A9%20dc8355abbd04466490d5a9ef65979abb/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-09-02_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_2.11.28.png"><img style="width:708px" src="%E1%84%86%E1%85%A6%E1%84%86%E1%85%A9%20dc8355abbd04466490d5a9ef65979abb/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-09-02_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_2.11.28.png"/></a></figure><p id="c92ba9ba-301f-4513-9f91-38bd1b440320" class="">Dacon 재정정보 AI 검색 알고리즘 경진대회에 참가하여, 중앙정부 재정 정보 검색을 위한 Chatbot 개발 프로젝트를 수행했습니다. 주요 활동으로는 PDF 데이터를 처리하고, 자연어처리 알고리즘을 개발하여 질문에 대한 정확한 응답을 생성하는 Retrieval-Augmented Generation(RAG) 기반 모델을 구축했습니다. 데이터 전처리 과정에서 pdfplumber와 fitz를 활용하여 최적의 성능을 달성했고, 임베딩 모델로는 multilingual-e5-large를 사용하여 효율성을 극대화했습니다. FAISS를 사용해 벡터 데이터베이스를 구축하고, LLM으로는 Meta-Llama-3.1-8B-Instruct를 선택해 적용했습니다. 대회에서 전체 360팀 중 24위(상위 6.67%)를 기록하며, 성과를 인정받았습니다.</p></details></li></ul><ul id="86abd7db-72bb-458b-9a02-e1b65e442f18" class="toggle"><li><details open=""><summary>양자컴퓨팅 경진대회 설명</summary><figure id="a5691de4-6a6c-4fa3-8562-8695f626528c" class="image"><a href="%E1%84%86%E1%85%A6%E1%84%86%E1%85%A9%20dc8355abbd04466490d5a9ef65979abb/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-09-02_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_2.10.55.png"><img style="width:708px" src="%E1%84%86%E1%85%A6%E1%84%86%E1%85%A9%20dc8355abbd04466490d5a9ef65979abb/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-09-02_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_2.10.55.png"/></a></figure><p id="675a1172-57d1-4cb7-8ce4-b4f7dc5bce63" class="">“양자컴퓨팅 인공지능 SW개발 경진대회”에서 <strong>양자컴퓨팅을 이용한 이미지 분류 모델 개발</strong>을 수행했습니다. 양자컴퓨팅은 기존 컴퓨터보다 복잡한 문제를 훨씬 빠르게 해결할 수 있는 기술로, 병렬 처리에 강점을 가지고 있습니다. 이 프로젝트에서는 양자컴퓨팅의 병렬 처리 능력을 활용해 이미지 데이터를 효율적으로 분류하는 모델을 개발했습니다.</p><p id="6dfacd47-1d7a-499b-bd5d-e771e7176831" class=""><strong>PennyLane</strong>이라는 양자컴퓨팅 프레임워크를 사용하여 <strong>Quantum Convolutional Neural Network (QCNN)</strong> 모델을 설계했으며, QCNN은 양자 회로와 심층 신경망을 결합해 고차원 이미지의 특성을 잘 파악합니다. 이미지를 양자 회로에 맞게 변환하고, QCNN 모델을 통해 학습시켜 분류 작업을 수행했습니다.</p><p id="ffe85ab8-cda0-48ce-9ba6-512f4d67ed63" class="">결과적으로, 양자컴퓨팅의 잠재력을 확인하며, 고전적 알고리즘보다 높은 정확도로 이미지를 분류할 수 있음을 입증했습니다. 이를 통해 양자컴퓨팅이 고차원 데이터 처리에 어떻게 활용될 수 있는지를 제시했습니다.</p></details></li></ul><p id="11b8e69f-2941-8066-968c-fce80d836002" class="">
+</p><ul id="1008e69f-2941-80a1-8f43-d0001b5bd1b5" class="toggle"><li><details open=""><summary>취준 강의</summary><ul id="11b8e69f-2941-80fb-9655-c39f174562ff" class="bulleted-list"><li style="list-style-type:disc">신기용 - 카카오뱅크 서비스개발(백엔드 개발자)</li></ul><ul id="11b8e69f-2941-806b-ba1f-c0ad3b483e0f" class="bulleted-list"><li style="list-style-type:disc"><a href="https://goodgid.github.io/">https://goodgid.github.io/</a></li></ul><ul id="11b8e69f-2941-801f-b246-f930bf609417" class="bulleted-list"><li style="list-style-type:disc">자기소개서 작성 팁<ul id="11b8e69f-2941-80c2-a5d9-da2e38d534a0" class="bulleted-list"><li style="list-style-type:circle">카카오톡 오픈톡방 활용<ul id="11b8e69f-2941-801c-8c37-dce65429e068" class="bulleted-list"><li style="list-style-type:square">알고리즘, SW 개발자 등등</li></ul></li></ul></li></ul><ul id="11b8e69f-2941-8079-91dc-e21bdbe8508e" class="bulleted-list"><li style="list-style-type:disc">면접 팁<ul id="11b8e69f-2941-80b3-9971-c4558db140f5" class="bulleted-list"><li style="list-style-type:circle">xx기업 오픈톡방</li></ul></li></ul><ul id="11b8e69f-2941-802e-992a-fb6926970ceb" class="toggle"><li><details open=""><summary>담당직무소개</summary><ul id="11b8e69f-2941-8003-8960-d42989fe8b7f" class="bulleted-list"><li style="list-style-type:disc">여신<ul id="11b8e69f-2941-8084-9aca-f1ee68e2230f" class="bulleted-list"><li style="list-style-type:circle">신용대출, 주담대</li></ul></li></ul><ul id="11b8e69f-2941-808f-a7b7-efbb441ed70d" class="bulleted-list"><li style="list-style-type:disc">수신<ul id="11b8e69f-2941-807a-9118-f63cbb537ba9" class="bulleted-list"><li style="list-style-type:circle">모임통장, 입출금통장</li></ul></li></ul><ul id="11b8e69f-2941-8010-839f-e02ef2e6f037" class="bulleted-list"><li style="list-style-type:disc">이체<ul id="11b8e69f-2941-809e-9e30-dc857c12f16d" class="bulleted-list"><li style="list-style-type:circle">카카오톡 간편이체, 계좌이체</li></ul></li></ul></details></li></ul><ul id="11b8e69f-2941-80f4-91bc-d718b6690fa1" class="toggle"><li><details open=""><summary>자소서 작성 팁</summary><ul id="11b8e69f-2941-8001-8937-d41fc840992a" class="bulleted-list"><li style="list-style-type:disc">숫자를 활용하자<ul id="11b8e69f-2941-808c-9a35-d11ea0beb4b3" class="bulleted-list"><li style="list-style-type:circle">ex) xx대회에서 수상 → xx대회에 총 <strong>n팀</strong>이 참가하여 <strong>n등</strong>으로 수상</li></ul><ul id="11b8e69f-2941-8025-b1a5-d3da31e9a926" class="bulleted-list"><li style="list-style-type:circle">ex)<strong> n여명</strong>의 유저가 제가 만든 서비스를 사용</li></ul></li></ul><ul id="11b8e69f-2941-804a-9926-f40e8f290588" class="bulleted-list"><li style="list-style-type:disc">수상 이력<ul id="11b8e69f-2941-8027-8de3-cd5e23f465fa" class="bulleted-list"><li style="list-style-type:circle">ex) 00에서 후원하는 00에서 대상</li></ul></li></ul><ul id="11b8e69f-2941-807c-bca8-e2076e305ff1" class="bulleted-list"><li style="list-style-type:disc">봉사활동<ul id="11b8e69f-2941-80b0-970c-c25c1d86a2eb" class="bulleted-list"><li style="list-style-type:circle">과기부와 외교부가 후원하는 프로그램에 참가하여 xx 개발한 경험을 쌓았다.</li></ul><ul id="11b8e69f-2941-802c-861b-d480b64b055c" class="bulleted-list"><li style="list-style-type:circle">kt&amp;g → 상발</li></ul></li></ul><ul id="11b8e69f-2941-8058-aaa8-e3d4088b2bc0" class="bulleted-list"><li style="list-style-type:disc">연구실<ul id="11b8e69f-2941-80fb-b82f-e92407dbef8a" class="bulleted-list"><li style="list-style-type:circle">xx 기업과 연계하여 xx 프로젝트 개발을 했습니다.</li></ul><ul id="11b8e69f-2941-8058-89cc-d60228597040" class="bulleted-list"><li style="list-style-type:circle">정부의 xx 사업 계획 추진을 위해 xx 프로젝트 개발을 했다.</li></ul><ul id="11b8e69f-2941-808c-8d50-ca4e545311ea" class="bulleted-list"><li style="list-style-type:circle">유바이오시스와 연계하여 ~</li></ul><ul id="11b8e69f-2941-8049-a3ab-f480dbb17f9e" class="bulleted-list"><li style="list-style-type:circle">한국생산기술연구원과 연계하여 ~</li></ul></li></ul></details></li></ul><ul id="11b8e69f-2941-800f-b960-c9705efd872c" class="toggle"><li><details open=""><summary>코테 팁</summary><ul id="11b8e69f-2941-80b3-b2bd-e1d46046ebba" class="bulleted-list"><li style="list-style-type:disc">준비방법<ul id="11b8e69f-2941-8057-98d5-cb771f3fa516" class="bulleted-list"><li style="list-style-type:circle">모든 유형을 다 풀어본다 → 시간이 오래 걸린다</li></ul><ul id="11b8e69f-2941-8061-a484-fca0255e213b" class="bulleted-list"><li style="list-style-type:circle">자주 출제되는 유형부터 준비!</li></ul><ul id="11b8e69f-2941-80ce-9165-c01fe241e113" class="bulleted-list"><li style="list-style-type:circle"><strong>완전 탐색(BFS, DFS)</strong>은 기본중의 기본!</li></ul><ul id="11b8e69f-2941-807a-9f3e-f26d5b39c8ec" class="bulleted-list"><li style="list-style-type:circle">특히 구현 + 시뮬레이션은 근본!</li></ul><ul id="11b8e69f-2941-8084-b70b-c36cd6681244" class="bulleted-list"><li style="list-style-type:circle">DP, 그래프 유형 문제는 일단 skip!<ul id="11b8e69f-2941-80ff-95ab-d4efa819919d" class="bulleted-list"><li style="list-style-type:square">2,3차원 점화식 dp</li></ul><ul id="11b8e69f-2941-80d4-ad76-e4190aea245d" class="bulleted-list"><li style="list-style-type:square">완탐과 조인되는 dp → 특정 지점 방문 여러번 방문x</li></ul></li></ul><ul id="11b8e69f-2941-807f-a9c3-e31eabb0ff19" class="bulleted-list"><li style="list-style-type:circle">1문제당 20~30분 고민 후 아이디어가 떠오르지 않으면 정답 확인<ul id="11b8e69f-2941-8080-959c-d42f992d22fe" class="bulleted-list"><li style="list-style-type:square">코테는 어느정도 문제 은행식</li></ul><ul id="11b8e69f-2941-808f-a8e5-cf7a79dc569c" class="bulleted-list"><li style="list-style-type:square">많이 풀어본 사람이 빠르게 풀 수 있다</li></ul><ul id="11b8e69f-2941-8052-aa1a-e5b449cd06cb" class="bulleted-list"><li style="list-style-type:square">여기서 중요한 포인트는 반드시 다시 풀어야 한다</li></ul><ul id="11b8e69f-2941-806d-b0e3-c7c23f4692a7" class="bulleted-list"><li style="list-style-type:square">반복 학습으로 문제 유형에 대해 빠르게 아이디어를 떠올릴 수 있다</li></ul></li></ul></li></ul></details></li></ul><ul id="11b8e69f-2941-8064-9032-c1260f2aab9f" class="toggle"><li><details open=""><summary>면접 팁</summary><ul id="11b8e69f-2941-8097-b4a5-c649259fc1b5" class="bulleted-list"><li style="list-style-type:disc">잘 볼 수 있을까?<ul id="11b8e69f-2941-8046-b04f-f8689d915d4b" class="bulleted-list"><li style="list-style-type:circle">면접관이 할 수 있는 질문의 폭을 줄이자</li></ul></li></ul><ul id="11b8e69f-2941-80dd-ad47-c50af7114a0d" class="bulleted-list"><li style="list-style-type:disc">면접은 공격형 면접이다<ul id="11b8e69f-2941-8014-b7f8-f83592f9c582" class="bulleted-list"><li style="list-style-type:circle">수비적으로 어떤 질문이 들어올까</li></ul></li></ul><ul id="11b8e69f-2941-8092-9ab2-f99504462e75" class="bulleted-list"><li style="list-style-type:disc">10개 질문에 BFS로 대답하는 것보다 1개라도 DFS로 대답하는 게 승산있다</li></ul></details></li></ul><ul id="11b8e69f-2941-8081-8bf3-d0334e278a97" class="toggle"><li><details open=""><summary><a href="https://open.kakao.com/o/sD37fM3">https://open.kakao.com/o/sD37fM3</a></summary></details></li></ul></details></li></ul><p id="11b8e69f-2941-8048-9848-c38661eabeaa" class="">
+</p><p id="11b8e69f-2941-8041-98cf-f00d33abc0c8" class="">
+</p><figure id="1ac8e69f-2941-8053-9b3b-d5be7b0367d8" class="image"><a href="%E1%84%86%E1%85%A6%E1%84%86%E1%85%A9%20dc8355abbd04466490d5a9ef65979abb/Screenshot_2025-03-04_at_8.51.14_PM.png"><img style="width:664.9921875px" src="%E1%84%86%E1%85%A6%E1%84%86%E1%85%A9%20dc8355abbd04466490d5a9ef65979abb/Screenshot_2025-03-04_at_8.51.14_PM.png"/></a></figure><p id="1ac8e69f-2941-80df-8891-c48aab1f7d44" class="">KT AIVLE School은 기업 실무형 AI/DX 인재 양성을 목표로 한 교육 프로그램으로, KT의 AI/DX 노하우를 기반으로 데이터 분석, 머신러닝, 딥러닝, MLOps 등을 학습하며, 산업별 AI 프로젝트를 수행하여 실무 역량을 강화하는 과정입니다.</p><figure id="1ac8e69f-2941-807d-894a-f524deb63162" class="image"><a href="%E1%84%86%E1%85%A6%E1%84%86%E1%85%A9%20dc8355abbd04466490d5a9ef65979abb/Screenshot_2025-03-04_at_8.51.33_PM.png"><img style="width:664.9921875px" src="%E1%84%86%E1%85%A6%E1%84%86%E1%85%A9%20dc8355abbd04466490d5a9ef65979abb/Screenshot_2025-03-04_at_8.51.33_PM.png"/></a></figure><p id="1ac8e69f-2941-807f-8d85-d1eb9a17de60" class="">‘프로젝트형 머신러닝 기반 빅데이터 분석 전문가 양성과정’은 머신러닝을 활용한 빅데이터 분석 및 AI 모델 개발 역량을 갖춘 실무형 전문가 양성을 목표로 하는 교육 과정입니다. 데이터 수집·전처리, 머신러닝·딥러닝 모델링, MLOps 기반 배포 및 운영까지 전반적인 데이터 분석 프로세스를 학습하며, 프로젝트 중심의 실무 경험을 통해 데이터 분석 역량을 강화하는 과정입니다.</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
