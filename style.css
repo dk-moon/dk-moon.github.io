@@ -626,6 +626,13 @@ article { display: none; }
 
         .clients-item img:hover { filter: grayscale(0);}
 
+.clients-name {
+    margin-top: 8px;
+    font-size: var(--fs7);
+    font-weight: var(--fw500);
+    color: var(--light-gray);
+}
+
 /*RESUME*/
 
 .article-title { margin-bottom: 30px; }
