@@ -626,6 +626,26 @@ article { display: none; }
 
         .clients-item img:hover { filter: grayscale(0);}
 
+        .client-logo-box {
+            text-align: center;
+            width: 100%;
+          }
+          
+          .client-name {
+            margin-top: 8px;
+            font-size: var(--fs7);
+            font-weight: var(--fw500);
+            color: var(--light-gray);
+          
+            /* 줄바꿈 관련 스타일 */
+            white-space: normal;
+            word-break: keep-all;
+            line-height: 1.4;
+            max-width: 120px; /* or adjust as needed */
+            margin-left: auto;
+            margin-right: auto;
+          }
+
 /*RESUME*/
 
 .article-title { margin-bottom: 30px; }
